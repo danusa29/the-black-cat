@@ -2,7 +2,6 @@ import Image from "next/image";
 import { fetchMenu, notion } from "./lib/notion";
 
 export default async function Home() {
-    // Fetch the menu data from the Notion database
     const menu = await fetchMenu();
     console.log(JSON.stringify(menu, null, 4));
 
