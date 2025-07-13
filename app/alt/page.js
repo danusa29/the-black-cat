@@ -1,9 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import CocktailModal from "./components/CocktailModal";
+import CocktailModal from "../components/CocktailModal";
 
-export default function Home() {
+export default function AltHome() {
   const [menu, setMenu] = useState([]);
   const [selectedCocktail, setSelectedCocktail] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -14,7 +14,7 @@ export default function Home() {
 
   const fetchMenuData = async () => {
     try {
-      const response = await fetch("/api/menu");
+      const response = await fetch("/api/menu-alt");
       const data = await response.json();
       setMenu(data);
     } catch (error) {
@@ -34,7 +34,7 @@ export default function Home() {
 
   return (
     <main className="max-w-7xl mx-auto my-auto pt-10 pb-10 pl-4 pr-4">
-      <h1 className="pb-14">The Brown Coral</h1>
+      <h1 className="pb-14">Rainey Day Reef</h1>
       {menu.map(({ name, cocktails }) =>
         cocktails.length ? (
           <section className="pb-9" key={name}>

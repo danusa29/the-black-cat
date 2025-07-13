@@ -1,39 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@300;400;500;600;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-    --foreground-rgb: 0, 0, 0;
-    --background-start-rgb: 214, 219, 220;
-    --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
 }
+
 html {
-    /* @apply text-[14px]; */
+  /* @apply text-[14px]; */
 }
 
 body {
-    @apply bg-black text-white;
-    @apply font-light;
+  @apply text-[#135b7e];
+  background-color: #e9e5d2;
+  font-family: "Quicksand", sans-serif;
+  @apply font-light;
 }
+
 p {
-    @apply text-xs;
-    &.small {
-        @apply text-xxs;
-    }
+  @apply text-base;
+  font-family: "Quicksand", sans-serif;
+  &.small {
+    @apply text-sm;
+  }
 }
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-    @apply font-light;
+  font-family: "Pacifico", cursive;
+  @apply font-normal;
+  color: #135b7e;
 }
+
 h1 {
-    @apply text-3xl;
+  @apply text-5xl;
 }
+
 h2 {
+  @apply text-3xl;
 }
+
 h3 {
-    @apply font-semibold text-sm;
+  @apply text-xl;
+  font-family: "Quicksand", sans-serif;
+  @apply font-semibold;
 }
