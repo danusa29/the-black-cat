@@ -1,9 +1,5 @@
 "use client";
 
-export const metadata = {
-  title: "Rainey Day Reef",
-};
-
 import { useState, useEffect } from "react";
 import CocktailModal from "../components/CocktailModal";
 
